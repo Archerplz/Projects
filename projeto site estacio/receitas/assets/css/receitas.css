@@ -1,0 +1,80 @@
+/* Definir a área para agrupar os painéis das receitas com base no modo flex */
+body {
+  background-color: aquamarine;
+}
+
+main {
+  padding: 10px;
+}
+
+footer {
+  top: 16px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.receitas-container {
+  padding: 23.9px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Definir a formatação dos painéis de receitas */
+.receita {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Definir a formatação para o nome da receita */
+.receita h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Definir a formatação para a foto do prato */
+.receita img {
+  width: 60%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Definir a formatação para a lista de itens */
+.receita h3 {
+  font-size: 16px;
+  margin-bottom: 9px;
+}
+
+.receita ul {
+  list-style-type: disc;
+  padding-left: 10px;
+}
+
+/* Definir a formatação para o modo de preparo */
+.receita p {
+  font-size: 15px;
+  display: inline-block;
+  text-align: justify;
+  text-size-adjust: inherit;
+}
+
+/* Estabelecer dimensões fixas para os painéis */
+@media screen and (max-width: 768px) {
+  .receita {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Utilizar barra de rolagem vertical na área principal */
+main {
+  overflow-y: auto;
+  max-height: calc(100vh - 100px); /* Ajuste a altura conforme necessário */
+}
